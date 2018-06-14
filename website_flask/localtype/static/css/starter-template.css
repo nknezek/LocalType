@@ -1,0 +1,15 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.row {
+width: 100%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
