@@ -28,11 +28,6 @@ def index():
                            title='LocalType',
                            )
 
-@app.route('/input')
-def text_input():
-    return render_template("input.html")
-
-
 @app.route('/output')
 def text_output():
     # pull input text and city from input field and store it
