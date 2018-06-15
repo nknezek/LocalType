@@ -44,9 +44,5 @@ def text_output():
     script, div = plt.create_figure()
     # just select the Cesareans  from the birth dtabase for the month that the user inputs
 
-<<<<<<< HEAD
     return render_template("output.html", input_text=input_text, input_city=input_city, explainer=exp.as_html(), synonyms=synhtml)
-=======
-    return render_template("output.html", input_text=input_text, input_city=input_city, explainer=exp.as_html(), script=script, div=div)
->>>>>>> bokeh
 
