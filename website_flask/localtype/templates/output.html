@@ -28,11 +28,11 @@
         <form action="/output" method="GET">
             <div class="row">
                 <div class="form-group box">
-                    <label for="input_text">Ad copy:</label><br>
+                    <label for="input_text">1. Ad copy:</label><br>
                     <textarea style="width:250px;height:150px;" id="input_text" name='input_text' placeholder="e.g. ">{{input_text}}</textarea>
                 </div>
                 <div class="form-group box">
-                    <label for="input_city">Choose a city:</label><br>
+                    <label for="input_city">2. Choose a city:</label><br>
                     <select id="input_city" name="input_city">
                         <option value="0">Anchorage, Alaska</option>
                         <option value="1">Berkeley, California</option>
@@ -47,6 +47,9 @@
     </div>
     <div class="container">
         {{explainer|safe}}
+    </div>
+    <div class="container">
+        {{synonyms|safe}}
     </div>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
