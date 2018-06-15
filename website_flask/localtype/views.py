@@ -11,6 +11,8 @@ from sklearn.pipeline import make_pipeline
 from lime.lime_text import LimeTextExplainer
 import dill
 
+import localtype.bokehplot as plt
+
 tokenizer = RegexpTokenizer(r'[a-zA-Z]+')
 stemmer = SnowballStemmer('english')
 tfidf_vectorizer = dill.load(open('/Users/nknezek/Documents/Insight_local/project/3city_test/tfidf_vectorizer.m', 'rb'))
@@ -36,8 +38,8 @@ def text_output():
     if input_text is None:
         input_text = "you didn't enter any text! So instead you get to see this easter-egg! Aren't you lucky?"
     exp = explainer.explain_instance(input_text, c.predict_proba, num_features=6, labels=[int(input_city)])
-
+    script, div = plt.create_figure()
     # just select the Cesareans  from the birth dtabase for the month that the user inputs
 
-    return render_template("output.html", input_text=input_text, input_city=input_city, explainer=exp.as_html())
+    return render_template("output.html", input_text=input_text, input_city=input_city, explainer=exp.as_html(), script=script, div=div)
 
