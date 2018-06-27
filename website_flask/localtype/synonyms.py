@@ -24,7 +24,7 @@ def suggest_synonyms(c, tokenizer, text, cityid, N=6):
     return syndict
 
 def html_suggested_synonyms(syndict):
-    html = '<h2>Suggested Synonyms:</h2>\n'
+    html = ''
     for w,s in syndict.items():
         if len(s) > 0:
             html += '<p><strong>'+w+':</strong> '

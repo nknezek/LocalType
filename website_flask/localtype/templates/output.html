@@ -36,15 +36,10 @@
             <div class="row">
                 <div class="form-group box">
                     <label for="input_text">1. Ad copy:</label><br>
-                    <textarea style="width:250px;height:150px;" id="input_text" name='input_text' placeholder="e.g. ">{{input_text}}</textarea>
+                    <textarea style="width:350px;height:200px;" id="input_text" name='input_text' placeholder="e.g. ">{{input_text}}</textarea>
                 </div>
                 <div class="form-group box">
-                    <label for="input_city">2. Choose a city:</label><br>
-                    <select id="input_city" name="input_city">
-                        <option value="0">Anchorage, Alaska</option>
-                        <option value="1">Berkeley, California</option>
-                        <option value="2">Denton, Texas</option>
-                    </select>
+                    {{dropdown_html|safe}}
                     {% include 'usa.html' %}
                 </div>
                 <div class="box">
@@ -54,10 +49,28 @@
         </form>
     </div>
     <div class="container">
-        {{explainer|safe}}
+        <div class="row">
+            <div class="box">
+                <h2>Overall Score: {{score|safe}}</h2>
+                <h3>Text Review</h3>
+                <div style="word-wrap:break-word; width:340px">
+                    {{color_text|safe}}
+                </div>
+                <h3>Suggested Synonyms</h3>
+                {{synonyms|safe}}
+            </div>
+            <div class="box">
+                <h2>Influential Words</h2>
+                {{top_words|safe}}
+            </div>
+            <div class="box">
+                <h2>Top Matching Cities</h2>
+                {{top_cities|safe}}
+            </div>
+        </div>
     </div>
     <div class="container">
-        {{synonyms|safe}}
+
     </div>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>

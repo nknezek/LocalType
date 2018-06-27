@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="form-group box">
                     <label for="input_text">Ad copy:</label><br>
-                    <textarea style="width:250px;height:150px;" id="input_text" name='input_text' placeholder="enter text here!"></textarea>
+                    <textarea style="width:350px;height:200px;" id="input_text" name='input_text' placeholder="enter text here!"></textarea>
                 </div>
                 <div class="form-group box">
                     <label for="input_city">Choose a city:</label><br>
@@ -38,6 +38,7 @@
                         <option value="1">Berkeley, California</option>
                         <option value="2">Denton, Texas</option>
                     </select>
+                    {% include 'usa.html' %}
                 </div>
                 <div class="box">
                     <button type="submit" class="btn btn-default btn-lg">Analyze!</button>
